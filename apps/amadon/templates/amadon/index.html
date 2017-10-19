@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Amdon</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Diversity Bots</h3>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Riccardo:Latin Programmer</td>
+                <td>100</td>
+                <td>
+                    <form action='/process1' method='post'>
+                        {% csrf_token %}
+                        <select name='quantity'>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <input type='hidden' name='product' value='1' />
+                        <input type='submit' value='Buy!' />
+                        </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Jason: Hoppa Thug</td>
+                <td>$88.88</td>
+                <td>
+                    <form action='/process' method='post'>
+                        {% csrf_token %}
+                        <select name='quantity'>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <input type='hidden' name='product' value='2' />
+                        <input type='submit' value='Buy!' />
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Jacob:Australian Redneck</td>
+                <td>$29.99</td>
+                <td>
+                    <form action='/process' method='post'>
+                        {% csrf_token %}
+                        <select name='quantity'>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <input type='hidden' name='product' value='3' />
+                        <input type='submit' value='Buy!' />
+                    </form>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
